@@ -4,9 +4,10 @@
 
   <head>
 
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="keywords" content="Yukimasa Sugizaki, 杉﨑 行優, 杉崎 行優, すぎざき ゆきまさ, すぎさき ゆきまさ, n_IMRC, Terminus-IMRC">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <meta name="viewport" content="width=device-width">
 
     <title>Y. Sugizaki</title>
 
@@ -40,7 +41,7 @@
 
     <ul>
       <li>
-        <strong>2022.4 - present</strong>: Corporate researcher in Kawasaki, Japan
+        <strong>2022.4 - present</strong>: Corporate cryptography researcher in Kawasaki, Japan
       </li>
       <li>
         <strong>2020.4 - 2022.3</strong>: Master student hypervised by <a href="https://www.hpcs.cs.tsukuba.ac.jp/~daisuke/">Daisuke Takahashi</a> at <a href="https://www.hpcs.cs.tsukuba.ac.jp/">High Performance Computing System (HPCS) laboratory</a>, <a href="https://www.tsukuba.ac.jp/">University of Tsukuba</a>, Japan
@@ -74,5 +75,60 @@
     </ul>
 
   </body>
+
+  <h2>Publications</h2>
+
+  <h3>Journal paper</h3>
+
+  <ul>
+    <li>
+      Yukimasa Sugizaki and Daisuke Takahashi,
+      "A Fast Algorithm for Computing the Number of Magic Series",
+      Annals of Combinatorics,
+      2022,
+      doi:<a href="https://doi.org/10.1007/s00026-022-00584-5">10.1007/s00026-022-00584-5</a>
+      <br>
+      Abstract:
+      We present a fast algorithm for computing the number of magic series, an enumeration problem of a certain integer partition.
+      Kinnaes showed that the number appears as a coefficient in a Gaussian polynomial and that the exact value can be efficiently extracted with a finite variant of Cauchy’s integral formula.
+      The algorithm requires a bit time complexity of <var>O</var>(<var>m</var><sup>4</sup> <var>M</var>(<var>m</var> log <var>m</var>)) and <var>O</var>(<var>m</var> log <var>m</var>)-bit space, where <var>m</var> is the order of the magic series and <var>M</var>(<var>n</var>) is the time complexity of multiplying two <var>n</var>-bit numbers.
+      Through our analysis, we confirm that this is the most efficient among previously reported algorithms.
+      In addition, we show that the number can be computed with a bit time complexity of <var>O</var>(<var>m</var><sup>3</sup> log <var>m</var> <var>M</var>(<var>m</var> log <var>m</var>)) by directly carrying out polynomial multiplication and division on the Gaussian polynomial.
+      Though the space consumption increases to <var>O</var>(<var>m</var><sup>3</sup> log <var>m</var>) bits, we demonstrate that our method actually computes the number faster for large orders.
+    </li>
+  </ul>
+
+  <h3>Conference proceedings</h3>
+
+  <ul>
+    <li>
+      Yukimasa Sugizaki and Daisuke Takahashi,
+      "Fast Computation of the Exact Number of Magic Series with an Improved Montgomery Multiplication Algorithm",
+      International Conference on Algorithms and Architectures for Parallel Processing (ICA3PP 2020),
+      doi:<a href="https://doi.org/10.1007/978-3-030-60239-0_25">10.1007/978-3-030-60239-0_25</a>
+      <br>
+      Abstract:
+      The numbers of magic series of large orders are computed on Intel Xeon Phi processors with an improved and optimized Montgomery multiplication algorithm.
+      The number of magic series can be efficiently computed by Kinnaes' formula, of which the most time-consuming element is modular multiplication.
+      We use Montgomery multiplication for faster modular multiplication, and the number of operations is reduced through procedural simplifications.
+      Modular addition, subtraction, and multiplication operations are vectorized by using the following instructions: Intel Advanced Vector Extensions (AVX), Intel Advanced Vector Extensions 2 (AVX2), and Intel Advanced Vector Extensions 512 (AVX-512).
+      The number of magic series of order 8000 is computed on multiple nodes of an Intel Xeon Phi processor with a total execution time of 1806 days.
+      Results are compared with salient studies in the literature to confirm the efficacy of the approach.
+    </li>
+  </ul>
+
+  <h3>Oral presentation</h3>
+
+  <ul>
+    <li>
+      杉﨑 行優 and 高橋 大介,
+      "NVIDIA Volta GPU における浮動小数点演算を用いた剰余乗算の高速化",
+      <a href="https://annual2020.jsiam.org">日本応用数理学会 2020年 年会</a>,
+      2020.
+      <br>
+      Abstract:
+      本研究では剰余乗算を効率的に計算するモンゴメリ乗算アルゴリズムを NVIDIA Volta GPU 向けに実装し性能を評価した．本講演では，整数と浮動小数点の演算器が独立に存在し動作するという NVIDIA Volta GPU の特性を活かし，整数演算と浮動小数点演算の両方を用いてモンゴメリ乗算を計算した場合の性能の向上について報告する．
+    </li>
+  </ul>
 
 </html>

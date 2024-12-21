@@ -9,6 +9,24 @@
     <meta name="referrer" content="no-referrer">
     <meta name="viewport" content="width=device-width">
 
+    <style type="text/css">
+      ol {
+        overflow: hidden;
+      }
+      .abstract {
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+        border: 1px solid gray;
+      }
+      .show-abstract:checked ~ ol .abstract {
+        overflow: hidden;
+        height: auto;
+        visibility: visible;
+        opacity: 1;
+      }
+    </style>
+
     <title>Y. Sugizaki</title>
 
   </head>
@@ -78,6 +96,9 @@
 
       <h2>Publications</h2>
 
+      <input type="checkbox" id="check-show-abstract" class="show-abstract" />
+      <label for="check-show-abstract">Show abstract</label>
+
       <h3>Journal paper</h3>
 
       <ol reversed>
@@ -87,14 +108,14 @@
           Annals of Combinatorics,
           2022,
           doi:<a href="https://doi.org/10.1007/s00026-022-00584-5">10.1007/s00026-022-00584-5</a>
-          <br>
-          Abstract:
-          We present a fast algorithm for computing the number of magic series, an enumeration problem of a certain integer partition.
-          Kinnaes showed that the number appears as a coefficient in a Gaussian polynomial and that the exact value can be efficiently extracted with a finite variant of Cauchy’s integral formula.
-          The algorithm requires a bit time complexity of <var>O</var>(<var>m</var><sup>4</sup> <var>M</var>(<var>m</var> log <var>m</var>)) and <var>O</var>(<var>m</var> log <var>m</var>)-bit space, where <var>m</var> is the order of the magic series and <var>M</var>(<var>n</var>) is the time complexity of multiplying two <var>n</var>-bit numbers.
-          Through our analysis, we confirm that this is the most efficient among previously reported algorithms.
-          In addition, we show that the number can be computed with a bit time complexity of <var>O</var>(<var>m</var><sup>3</sup> log <var>m</var> <var>M</var>(<var>m</var> log <var>m</var>)) by directly carrying out polynomial multiplication and division on the Gaussian polynomial.
-          Though the space consumption increases to <var>O</var>(<var>m</var><sup>3</sup> log <var>m</var>) bits, we demonstrate that our method actually computes the number faster for large orders.
+          <div class="abstract">
+            We present a fast algorithm for computing the number of magic series, an enumeration problem of a certain integer partition.
+            Kinnaes showed that the number appears as a coefficient in a Gaussian polynomial and that the exact value can be efficiently extracted with a finite variant of Cauchy's integral formula.
+            The algorithm requires a bit time complexity of <var>O</var>(<var>m</var><sup>4</sup> <var>M</var>(<var>m</var> log <var>m</var>)) and <var>O</var>(<var>m</var> log <var>m</var>)-bit space, where <var>m</var> is the order of the magic series and <var>M</var>(<var>n</var>) is the time complexity of multiplying two <var>n</var>-bit numbers.
+            Through our analysis, we confirm that this is the most efficient among previously reported algorithms.
+            In addition, we show that the number can be computed with a bit time complexity of <var>O</var>(<var>m</var><sup>3</sup> log <var>m</var> <var>M</var>(<var>m</var> log <var>m</var>)) by directly carrying out polynomial multiplication and division on the Gaussian polynomial.
+            Though the space consumption increases to <var>O</var>(<var>m</var><sup>3</sup> log <var>m</var>) bits, we demonstrate that our method actually computes the number faster for large orders.
+          </div>
         </li>
       </ol>
 
@@ -102,34 +123,72 @@
 
       <ol reversed>
         <li>
+          Akira Nakashima, Takuya Hayashi, Hikaru Tsuchida, <em>Yukimasa Sugizaki</em>, Kengo Mori, Takashi Nishide,
+          <strong>Faster Homomorphic Evaluation of Arbitrary Bivariate Integer Functions via Homomorphic Linear Transformation</strong>,
+          12th Workshop on Encrypted Computing &amp; Applied Homomorphic Cryptography (WAHC 2024),
+          2024,
+          doi:<a href="https://doi.org/10.1145/3689945.3694804">10.1145/3689945.3694804</a>
+          <div class="abstract">
+            Fully homomorphic encryption (FHE) can perform computations on encrypted data, allowing us to analyze sensitive data while maintaining security.
+            Several popular FHE schemes, such as BGV and BFV, are suitable for arithmetic circuits.
+            However, there is still much room for improving the efficiency of the evaluation of non-linear functions in those schemes.
+            We propose an efficient method for the evaluation of arbitrary bivariate functions in homomorphic encryption with integers as plaintext.
+            Prior work on arbitrary bivariate function evaluation for relatively large plaintext integers has been proposed by Maeda et al. (WAHC'22).
+            In the method of Maeda et al., the polynomial evaluation is the most time-consuming part in terms of the execution time.
+            In this work, we construct a method for arbitrary bivariate functions based on homomorphic linear transformations, eliminating the need for polynomial evaluation to enhance efficiency.
+            We also provide a time complexity analysis showing that our method achieves lower time computational complexity.
+            In addition, we implement the previous method of Maeda et al. and our proposed method using OpenFHE with the input domain {0, 1, ..., 2<sup>15</sup> - 1} and demonstrate that our method achieves a 1.38 times speed up for the division function compared to the previous method.
+          </div>
+        </li>
+        <li>
+          Akira Nakashima, <em>Yukimasa Sugizaki</em>, Hikaru Tsuchida, Takuya Hayashi, Koji Nuida, Kengo Mori, Toshiyuki Isshiki,
+          <strong>Multi-Key Homomorphic Encryption with Threshold Re-Encryption</strong>,
+          Selected Areas in Cryptography 2024 (SAC 2024),
+          2024
+          <div class="abstract">
+            Fully homomorphic encryption (FHE) is a cryptographic scheme that allows users to perform arbitrary arithmetic operations over plaintexts by operations (called homomorphic operations) on ciphertexts without decryption.
+            A multi-key FHE (MK-FHE) can perform homomorphic operations on ciphertexts encrypted with different encryption keys.
+            In MK-FHE schemes, to decrypt a ciphertext encrypted with different users' keys, users having the corresponding decryption keys run a threshold decryption, which is a combination of each user's partial decryption and merging of their results.
+            However, it has a drawback that the merging process requires communication and hence these users must be online during the process. Moreover, the computation and communication costs grow when the number of involved users increases.
+            There is a previous work to overcome this issue by applying the idea of proxy re-encryption (PRE), where a proxy can convert a multi-key ciphertext, using re-encryption keys given by the key holders, into a ciphertext decryptable by a single receiver's decryption key.
+            However, a collusion of only an adversarial receiver and the single proxy can reveal the original user's decryption key.
+            To resolve the issue, we propose a new framework of MK-FHE with threshold PRE.
+            Here we introduce <var>N</var> proxies performing re-encryption in threshold manner; now the adversarial receiver needs to collude with all of the <var>N</var> proxies, which becomes more difficult than the previous single-proxy case.
+            We also propose an instantiation based on the BFV scheme and prove its security.
+            In addition, we implement our scheme and measure the running time of its algorithms.
+          </div>
+        </li>
+        <li>
           <em>Yukimasa Sugizaki</em>, Hikaru Tsuchida, Takuya Hayashi, Koji Nuida, Akira Nakashima, Toshiyuki Isshiki, Kengo Mori,
           <strong>Threshold Fully Homomorphic Encryption Over the Torus</strong>,
           European Symposium on Research in Computer Security (ESORICS 2023),
+          2023,
           doi:<a href="https://doi.org/10.1007/978-3-031-50594-2_3">10.1007/978-3-031-50594-2_3</a>
-          <br>
-          Abstract:
-          Fully homomorphic encryption (FHE) enables arithmetic operations to be performed over plaintext by operations on undecrypted ciphertext.
-          The Chillotti-Gama-Georgieva-Izabachene (CGGI) scheme is a typical FHE scheme, has attracted attention because of its fast bootstrapping and the availability of open-source implementation software.
-          A threshold FHE (ThFHE) scheme has protocols for distributed key generation and distributed decryption that are executed cooperatively among the parties while keeping the decryption key distributed among them.
-          It is useful for secure computations with inputs from multiple parties.
-          However, a ThFHE scheme based on CGGI has yet to be proposed.
-          In this paper, we propose a client-aided ThFHE scheme based on CGGI.
-          Our scheme achieves the same bootstrapping as CGGI without affecting the noise analysis or any CGGI parameter.
-          Therefore, existing open-source software implementing CGGI can easily be extended to our scheme, a ThFHE variant of the CGGI scheme, without changing the implementation part regarding homomorphic operations.
+          <div class="abstract">
+            Fully homomorphic encryption (FHE) enables arithmetic operations to be performed over plaintext by operations on undecrypted ciphertext.
+            The Chillotti-Gama-Georgieva-Izabachene (CGGI) scheme is a typical FHE scheme, has attracted attention because of its fast bootstrapping and the availability of open-source implementation software.
+            A threshold FHE (ThFHE) scheme has protocols for distributed key generation and distributed decryption that are executed cooperatively among the parties while keeping the decryption key distributed among them.
+            It is useful for secure computations with inputs from multiple parties.
+            However, a ThFHE scheme based on CGGI has yet to be proposed.
+            In this paper, we propose a client-aided ThFHE scheme based on CGGI.
+            Our scheme achieves the same bootstrapping as CGGI without affecting the noise analysis or any CGGI parameter.
+            Therefore, existing open-source software implementing CGGI can easily be extended to our scheme, a ThFHE variant of the CGGI scheme, without changing the implementation part regarding homomorphic operations.
+          </div>
         </li>
         <li>
           <em>Yukimasa Sugizaki</em>, Daisuke Takahashi,
           <strong>Fast Computation of the Exact Number of Magic Series with an Improved Montgomery Multiplication Algorithm</strong>,
           International Conference on Algorithms and Architectures for Parallel Processing (ICA3PP 2020),
+          2020,
           doi:<a href="https://doi.org/10.1007/978-3-030-60239-0_25">10.1007/978-3-030-60239-0_25</a>
-          <br>
-          Abstract:
-          The numbers of magic series of large orders are computed on Intel Xeon Phi processors with an improved and optimized Montgomery multiplication algorithm.
-          The number of magic series can be efficiently computed by Kinnaes' formula, of which the most time-consuming element is modular multiplication.
-          We use Montgomery multiplication for faster modular multiplication, and the number of operations is reduced through procedural simplifications.
-          Modular addition, subtraction, and multiplication operations are vectorized by using the following instructions: Intel Advanced Vector Extensions (AVX), Intel Advanced Vector Extensions 2 (AVX2), and Intel Advanced Vector Extensions 512 (AVX-512).
-          The number of magic series of order 8000 is computed on multiple nodes of an Intel Xeon Phi processor with a total execution time of 1806 days.
-          Results are compared with salient studies in the literature to confirm the efficacy of the approach.
+          <div class="abstract">
+            The numbers of magic series of large orders are computed on Intel Xeon Phi processors with an improved and optimized Montgomery multiplication algorithm.
+            The number of magic series can be efficiently computed by Kinnaes' formula, of which the most time-consuming element is modular multiplication.
+            We use Montgomery multiplication for faster modular multiplication, and the number of operations is reduced through procedural simplifications.
+            Modular addition, subtraction, and multiplication operations are vectorized by using the following instructions: Intel Advanced Vector Extensions (AVX), Intel Advanced Vector Extensions 2 (AVX2), and Intel Advanced Vector Extensions 512 (AVX-512).
+            The number of magic series of order 8000 is computed on multiple nodes of an Intel Xeon Phi processor with a total execution time of 1806 days.
+            Results are compared with salient studies in the literature to confirm the efficacy of the approach.
+          </div>
         </li>
       </ol>
 
@@ -137,40 +196,49 @@
 
       <ol reversed>
         <li>
+          <em>Yukimasa Sugizaki</em>, Saki Otsuki, Hiroto Tamiya, Akira Nakashima, Toshiyuki Isshiki,
+          <strong>三角格子における最近傍ベクトル探索の高速化</strong>,
+          <a href="https://www.ieice.org/~biox/sbra2024/">第14回 バイオメトリクスと認識・認証シンポジウム（SBRA 2024）</a>,
+          2024
+          <div class="abstract">
+            生体特徴量などのサンプリングのたびに誤差を含む情報から一意の乱数を抽出する手法としてfuzzy extractorが知られている．ユークリッド距離に基づくfuzzy extractorの構成が望まれるが，効率的な構成方法が知られていない．そこで，三角格子における特徴量の最近傍ベクトルを利用することで，ユークリッド距離に基づく本人性の確認を高精度に近似可能なfuzzy extractorを構成できることが示された．本稿では，高橋らの方式で用いられる格子上の最近傍ベクトル探索処理を効率化する方法を提案する．特徴量の次元数を <var>n</var> としたとき，高橋らの方式の最近傍ベクトル探索処理は <var>O</var>(<var>n</var> log <var>n</var>) であったのに対し，提案方式は <var>O</var>(<var>n</var>) で実行できる．
+          </div>
+        </li>
+        <li>
           中島 明, 林 卓也, 土田 光, <em>杉崎 行優</em>, 森 健吾, 西出 隆志,
           <strong>整数型準同型暗号におけるHomomorphic Linear Transformationを用いた任意二変数関数計算</strong>,
-          <a href="https://www.iwsec.org/scis/2024/index.html">2024年 暗号と情報セキュリティシンポジウム</a>,
+          <a href="https://www.iwsec.org/scis/2024/index.html">2024年 暗号と情報セキュリティシンポジウム（SCIS 2024）</a>,
           2024
-          <br>
-          Abstract:
-          本稿では，整数を平文とする準同型暗号方式における任意二変数関数計算の効率化を提案する．比較的大きな平文整数に対して任意二変数関数計算を行う先行研究として，前田らの方式 (WAHC’22) がある．本研究では，前田らの方式において支配的な処理である多項式評価計算を回避し，より高速なHomomorphic Linear Transformation処理に基づくテーブルルックアップを行うことで効率化を実現する．提案方式についてPALISADEを用いたC++による実装を行い，その結果を報告する．
+          <div class="abstract">
+            本稿では，整数を平文とする準同型暗号方式における任意二変数関数計算の効率化を提案する．比較的大きな平文整数に対して任意二変数関数計算を行う先行研究として，前田らの方式 (WAHC'22) がある．本研究では，前田らの方式において支配的な処理である多項式評価計算を回避し，より高速なHomomorphic Linear Transformation処理に基づくテーブルルックアップを行うことで効率化を実現する．提案方式についてPALISADEを用いたC++による実装を行い，その結果を報告する．
+          </div>
         </li>
         <li>
           伊藤 直也, <em>杉崎 行優</em>, 土田 光, 高木 剛,
           <strong>ゲート数が少ないbinary adder treeとmulti-key TFHEを用いた性能評価</strong>,
-          <a href="https://www.iwsec.org/scis/2023/index.html">2023年 暗号と情報セキュリティシンポジウム</a>,
+          <a href="https://www.iwsec.org/scis/2023/index.html">2023年 暗号と情報セキュリティシンポジウム（SCIS 2023）</a>,
           2023
-          <br>
-          Abstract:
-          準同型暗号とは，暗号文を復号せずに，平文に対する演算が可能な暗号方式である．平文に対する加算と乗算を任意の回数だけ計算可能な準同型暗号を，完全準同型暗号という．代表的な完全準同型暗号として，TFHE が挙げられる．さらに，複数の暗号化鍵が存在可能な一般化されたTFHEとして，multi-key TFHE (MK-TFHE) が提案されている．TFHE は関数を論理回路で表現し，論理ゲートごとに準同型演算を行うことで，入力を明かさずに任意の関数を計算できる．代表的な関数として，総和計算が挙げられる．特に各入力が1ビットの総和計算は，ハミング距離計算や二値化ニューラルネットワークの推論で用いられる．総和計算の回路表現として，binary adder tree (BAT) が挙げられる．TFHE により総和計算を含む関数を計算する場合，BAT の計算時間を削減すること，関数全体の計算時間も削減できる．よって，BAT を少ないゲート数で構成することが望まれる．本稿では既存の BAT よりもゲート数が少ない BAT を提案する．また，MK-TFHE により提案方式を用いたハミング距離計算を実装し，実行時間を評価する．
+          <div class="abstract">
+            準同型暗号とは，暗号文を復号せずに，平文に対する演算が可能な暗号方式である．平文に対する加算と乗算を任意の回数だけ計算可能な準同型暗号を，完全準同型暗号という．代表的な完全準同型暗号として，TFHEが挙げられる．さらに，複数の暗号化鍵が存在可能な一般化されたTFHEとして，multi-key TFHE (MK-TFHE) が提案されている．TFHEは関数を論理回路で表現し，論理ゲートごとに準同型演算を行うことで，入力を明かさずに任意の関数を計算できる．代表的な関数として，総和計算が挙げられる．特に各入力が1ビットの総和計算は，ハミング距離計算や二値化ニューラルネットワークの推論で用いられる．総和計算の回路表現として，binary adder tree (BAT) が挙げられる．TFHEにより総和計算を含む関数を計算する場合，BATの計算時間を削減すること，関数全体の計算時間も削減できる．よって，BATを少ないゲート数で構成することが望まれる．本稿では既存のBATよりもゲート数が少ないBATを提案する．また，MK-TFHEにより提案方式を用いたハミング距離計算を実装し，実行時間を評価する．
+          </div>
         </li>
         <li>
           林 卓也, 一色 寿幸, 森 健吾, 縫田 光司, <em>杉崎 行優</em>, 土田 光,
           <strong>TFHEに基づくクライアント補助型閾値完全準同型暗号</strong>,
-          <a href="https://www.iwsec.org/scis/2023/index.html">2023年 暗号と情報セキュリティシンポジウム</a>,
+          <a href="https://www.iwsec.org/scis/2023/index.html">2023年 暗号と情報セキュリティシンポジウム（SCIS 2023）</a>,
           2023
-          <br>
-          Abstract:
-          Fully homomorphic encryption (FHE) とは，暗号文を復号せずに，暗号文上の計算により平文に対する加算や乗算を任意の回数だけ計算可能な暗号方式である．特に復号鍵を複数の参加者にシェアとして分散したまま復元せずに，復号鍵に対応する暗号化鍵の生成や暗号文の復号が可能なFHEをthreshold FHE (ThFHE) という．ThFHEでは，復号鍵のシェアが一定数集まらない限り復号鍵を復元できないため，複数の参加者からの入力を用いた秘密計算に有用である．代表的なFHEとして，TFHEが挙げられる．TFHEは，暗号文に蓄積されたノイズを低減するbootstrappingが高速であることや，TFHEを実装したオープンソースソフトウェアが充実していることから，注目を集めている．しかし，TFHEに基づくThFHEは，我々が知る限り提案されていない．本稿では，TFHEに基づくクライアント補型のThFHEを提案する．提案方式は，TFHEと同じbootstrappingを実現しつつ，分散暗号化や分散復号が可能なため，複数の参加者からの入力を用いた秘密計算を実現できる．
+          <div class="abstract">
+            Fully homomorphic encryption (FHE) とは，暗号文を復号せずに，暗号文上の計算により平文に対する加算や乗算を任意の回数だけ計算可能な暗号方式である．特に復号鍵を複数の参加者にシェアとして分散したまま復元せずに，復号鍵に対応する暗号化鍵の生成や暗号文の復号が可能なFHEをthreshold FHE (ThFHE) という．ThFHEでは，復号鍵のシェアが一定数集まらない限り復号鍵を復元できないため，複数の参加者からの入力を用いた秘密計算に有用である．代表的なFHEとして，TFHEが挙げられる．TFHEは，暗号文に蓄積されたノイズを低減するbootstrappingが高速であることや，TFHEを実装したオープンソースソフトウェアが充実していることから，注目を集めている．しかし，TFHEに基づくThFHEは，我々が知る限り提案されていない．本稿では，TFHEに基づくクライアント補型のThFHEを提案する．提案方式は，TFHEと同じbootstrappingを実現しつつ，分散暗号化や分散復号が可能なため，複数の参加者からの入力を用いた秘密計算を実現できる．
+          </div>
         </li>
         <li>
           <em>杉﨑 行優</em>, 高橋 大介,
-          <strong>NVIDIA Volta GPU における浮動小数点演算を用いた剰余乗算の高速化</strong>,
+          <strong>NVIDIA Volta GPUにおける浮動小数点演算を用いた剰余乗算の高速化</strong>,
           <a href="https://annual2020.jsiam.org/">日本応用数理学会 2020年 年会</a>,
           2020
-          <br>
-          Abstract:
-          本研究では剰余乗算を効率的に計算するモンゴメリ乗算アルゴリズムを NVIDIA Volta GPU 向けに実装し性能を評価した．本講演では，整数と浮動小数点の演算器が独立に存在し動作するという NVIDIA Volta GPU の特性を活かし，整数演算と浮動小数点演算の両方を用いてモンゴメリ乗算を計算した場合の性能の向上について報告する．
+          <div class="abstract">
+            本研究では剰余乗算を効率的に計算するモンゴメリ乗算アルゴリズムをNVIDIA Volta GPU向けに実装し性能を評価した．本講演では，整数と浮動小数点の演算器が独立に存在し動作するというNVIDIA Volta GPUの特性を活かし，整数演算と浮動小数点演算の両方を用いてモンゴメリ乗算を計算した場合の性能の向上について報告する．
+          </div>
         </li>
       </ol>
 

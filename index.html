@@ -105,6 +105,24 @@
       <ol reversed>
         <li>
           <em>Yukimasa Sugizaki</em>, Daisuke Takahashi,
+          <strong>Improved Modular Multiplication Algorithms Using Solely IEEE 754 Binary Floating-Point Operations</strong>,
+          IEEE Transactions on Emerging Topics in Computing (TETC),
+          2025,
+          (to appear)
+          <div class="abstract">
+            In this paper, we propose three modular multiplication algorithms that use only the IEEE 754 binary floating-point operations.
+            Several previous studies have used floating-point operations to perform modular multiplication.
+            However, they considered only positive integers and did not utilize the dedicated sign bit in the floating-point representation.
+            Our first algorithm is an extension of these studies, which are based on Shoup multiplication.
+            By allowing operands to be negative, we increased the maximum supported modulus size by approximately 1.21 times.
+            Our remaining two algorithms are based on Montgomery multiplication for positive and signed integers, respectively.
+            Although these algorithms require more round-to-integral operations, they support a modulus size of up to twice as large as that for Shoup multiplication for positive integers.
+            For processors with relatively low round-to-integral performance, we propose versions of the three algorithms without the round-to-integral operation.
+            Evaluations on four CPUs with different levels of instruction performance show that floating-point-based algorithms, including the proposed algorithms, can be regarded as alternatives to integer-based algorithms for mid-sized moduli, especially when floating-point operations are faster on the processors.
+          </div>
+        </li>
+        <li>
+          <em>Yukimasa Sugizaki</em>, Daisuke Takahashi,
           <strong>A Fast Algorithm for Computing the Number of Magic Series</strong>,
           Annals of Combinatorics,
           2022,

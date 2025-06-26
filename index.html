@@ -129,6 +129,15 @@
           24th International Symposium on Parallel and Distributed Computing (ISPDC 2025),
           2025,
           (to appear)
+          <div class="abstract">
+            In this paper, we propose a multi-threaded number theoretic transform (NTT) implementation using Arm Scalable Vector Extension (SVE) instructions.
+            The NTT, a generalization of the fast Fourier transform over modular integers, is used for the multiplication of polynomials and multiple-precision numbers.
+            We adopt the blocked six-step NTT algorithm, which decomposes the transform into smaller independent transforms, to achieve high cache utilization and parallelism.
+            Under the typical assumption that the inner transform length is a power of two and is performed in bit-reversed order, we reduce the number of matrix transpositions in the algorithm from three to two.
+            We also make use of the shuffle instructions of SVE to efficiently perform submatrix transposition within the vector registers, which is used in both the inner NTT computation and transposition in the six-step algorithm.
+            We evaluate our multi-threaded NTT implementation on the Fujitsu A64FX processor, which is equipped with 48 cores, each with two 512-bit SVE units.
+            The results show that the proposed optimizations accelerate a 2<sup>31</sup>-point NTT by 1.81 times compared to previous work that used the same processor.
+          </div>
         </li>
         <li>
           Akira Nakashima, Takuya Hayashi, Hikaru Tsuchida, <em>Yukimasa Sugizaki</em>, Kengo Mori, Takashi Nishide,

@@ -104,6 +104,25 @@
 
       <ol reversed>
         <li>
+          Akira Nakashima, <em>Yukimasa Sugizaki</em>, Hikaru Tsuchida, Takuya Hayashi, Koji Nuida, Kengo Mori, Toshiyuki Isshiki,
+          <strong>Multi-Key Homomorphic Encryption with Threshold Re-Encryption via (Replicated) Additive Secret Sharing</strong>,
+          IEICE Transactions on Fundamentals of Electronics, Communications and Computer Sciences (TRANSFUN),
+          2025,
+          doi:<a href="https://doi.org/10.1587/transfun.2025CIP0021">10.1587/transfun.2025CIP0021</a>
+          <div class="abstract">
+            Fully homomorphic encryption (FHE) is a cryptographic scheme that allows users to perform arbitrary arithmetic operations over plaintexts by operations (called homomorphic operations) on ciphertexts without decryption.
+            A multi-key FHE (MK-FHE) can perform homomorphic operations on ciphertexts encrypted with different encryption keys.
+            In MK-FHE schemes, to decrypt a ciphertext encrypted with different users' keys, users having the corresponding decryption keys run a threshold decryption, which is a combination of each user's partial decryption and merging of their results.
+            However, it has a drawback that the merging process requires communication and hence these users must be online during the process. Moreover, the computation and communication costs grow when the number of involved users increases.
+            There is a previous work to overcome this issue by applying the idea of proxy re-encryption (PRE), where a proxy can convert a multi-key ciphertext, using re-encryption keys given by the key holders, into a ciphertext decryptable by a single receiver's decryption key.
+            However, a collusion of only an adversarial receiver and the single proxy can reveal the original user's decryption key.
+            To resolve the issue, we propose a new framework of MK-FHE with threshold PRE.
+            Here we introduce <var>N</var> proxies performing re-encryption in threshold manner; now the adversarial receiver needs to collude with all of the <var>N</var> proxies, which becomes more difficult than the previous single-proxy case.
+            We also propose an instantiation based on the BFV scheme and prove its security.
+            In addition, we implement our scheme and measure the running time of its algorithms.
+          </div>
+        </li>
+        <li>
           <em>Yukimasa Sugizaki</em>, Daisuke Takahashi,
           <strong>Improved Modular Multiplication Algorithms Using Solely IEEE 754 Binary Floating-Point Operations</strong>,
           IEEE Transactions on Emerging Topics in Computing (TETC),

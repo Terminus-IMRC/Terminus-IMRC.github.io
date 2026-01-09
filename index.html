@@ -165,7 +165,18 @@
           <strong>Improved Implementation of Number Theoretic Transform on NVIDIA GPU with Tensor Cores</strong>,
           SupercomputingAsia 2026 / International Conference on High Performance Computing in Asia-Pacific Region 2026 (SCA/HPCAsia 2026),
           2026,
-          (accepted)
+          doi:<a href="https://doi.org/10.1145/3773656.3773673">10.1145/3773656.3773673</a>
+          <div class="abstract">
+            In this paper, we propose an improved implementation of the number theoretic transform (NTT) using Tensor Cores, which are dedicated matrix arithmetic units on NVIDIA GPUs.
+            The NTT is a generalization of the discrete Fourier transform over modular integers, enabling error-free computation of convolution and polynomial multiplication.
+            To accelerate cryptographic schemes, one of the chief applications of the NTT, previous studies also employed Tensor Cores for NTT computation.
+            However, there is still room for optimizations with regard to the instruction and shared memory usage.
+            Through a careful analysis, we found that the matrix transposition required for in-register NTT computation can be performed at no cost (i.e., without using memory) by only swapping the order of the input operands to Tensor Cores.
+            Because Tensor Cores support only up to eight-bit integers as inputs, we first compute and accumulate the products of decomposed eight-bit digits and then reduce the result modulo an appropriate modulus, as done in previous studies.
+            For this task, we propose an efficient modular reduction algorithm that utilizes the properties of moduli used for the NTT.
+            We compare the performance of our implementation with that of existing methods.
+            The results show that our implementation outperforms existing methods for a certain set of parameter values.
+          </div>
         </li>
         <li>
           <em>Yukimasa Sugizaki</em>, Daisuke Takahashi,

@@ -5,28 +5,10 @@
   <head>
 
     <meta charset="utf-8">
-    <meta name="keywords" content="Yukimasa Sugizaki, 杉﨑 行優, 杉崎 行優, すぎざき ゆきまさ, すぎさき ゆきまさ, n_IMRC, Terminus-IMRC">
+    <meta name="keywords" content="Yukimasa Sugizaki, Yukimasa Sugisaki, 杉﨑 行優, 杉崎 行優, すぎざき ゆきまさ, すぎさき ゆきまさ, n_IMRC, Terminus-IMRC">
     <meta name="referrer" content="no-referrer">
     <meta name="viewport" content="width=device-width">
     <meta name="color-scheme" content="light dark">
-
-    <style>
-      ol {
-        overflow: hidden;
-      }
-      .abstract {
-        height: 0;
-        visibility: hidden;
-        opacity: 0;
-        border: 1px solid gray;
-      }
-      .show-abstract:checked ~ ol .abstract {
-        overflow: hidden;
-        height: auto;
-        visibility: visible;
-        opacity: 1;
-      }
-    </style>
 
     <title>Y. Sugizaki</title>
 
@@ -36,46 +18,59 @@
 
     <article>
 
-      <h1>Yukimasa Sugizaki (杉崎 行優; 杉﨑 行優)</h1>
+      <h1>Yukimasa Sugizaki (杉崎 行優; 杉﨑 行優), Ph.D.</h1>
 
-      <h2>Profile</h2>
+      <h2>Research</h2>
+
+      <p>
+      My research focuses on the design and implementation of <strong>high-performance arithmetic and cryptographic algorithms</strong> for modern computing architectures.
+        In particular, I work on:
+      </p>
+
+      <ul>
+        <li><strong>Architecture-specific optimization</strong> for CPUs and GPUs, including Intel AVX-512, Arm SVE, and NVIDIA Tensor Cores</li>
+        <li><strong>High-performance modular arithmetic</strong>, including Barrett, Shoup, and Montgomery algorithms</li>
+        <li><strong>Number theoretic transform (NTT)</strong> for polynomial and cryptographic computation</li>
+        <li><strong>Efficient implementation of cryptographic schemes</strong>, including homomorphic encryption</li>
+      </ul>
+
+      <h2>Employment</h2>
 
       <ul>
         <li>
-          <strong>Given name</strong>: Yukimasa (行優)
+          <strong>2026-09 &ndash; present</strong>: Part-time lecturer, Meiji University
         </li>
         <li>
-          <strong>Family name</strong>: Sugizaki (杉崎, or formally 杉﨑)
+          <strong>2022-04 &ndash; present</strong>: Researcher, NEC Corporation
         </li>
         <li>
-          <strong>Interests</strong>: Computational number theory, software optimization, etc.
-        </li>
-        <li>
-          <strong>Degree</strong>: Ph.D. in Engineering
+          <strong>2016-03 &ndash; 2022-03</strong>: Part-time software engineer, <a href="https://idein.jp/">Idein Inc.</a>
         </li>
       </ul>
 
-      <h2>Affiliations</h2>
+      <h2>Education</h2>
 
       <ul>
         <li>
-          <strong>2024.4 &ndash; 2026.3</strong>: Doctoral student hypervised by <a href="https://www.hpcs.cs.tsukuba.ac.jp/~daisuke/">Daisuke Takahashi</a> at <a href="https://www.hpcs.cs.tsukuba.ac.jp/">High Performance Computing System (HPCS) laboratory</a>, University of Tsukuba, Japan
+          <strong>2024-04 &ndash; 2026-03</strong>: Ph.D. in Engineering, Graduate School of Science and Technology, University of Tsukuba
+          <ul>
+            <li>
+              <strong>Advisor</strong>: <a href="https://www.hpcs.cs.tsukuba.ac.jp/~daisuke/">Prof. Daisuke Takahashi</a>
+            </li>
+            <li>
+              <strong>Dissertation</strong>: Fast computation of the number of magic series on processors with SIMD or matrix multiplication unit (SIMDまたは行列乗算ユニットを備えたプロセッサにおける魔法列の数の高速な計算), <a href="https://hdl.handle.net/2241/0002022675">oai:tsukuba.repo.nii.ac.jp:02022675</a>
+            </li>
+          </ul>
         </li>
         <li>
-          <strong>2022.4 &ndash; present</strong>: Researcher at NEC Corporation, Japan
+          <strong>2020-04 &ndash; 2022-03</strong>: Master of Engineering, Graduate School of Science and Technology, University of Tsukuba
         </li>
         <li>
-          <strong>2020.4 &ndash; 2022.3</strong>: Master student hypervised by <a href="https://www.hpcs.cs.tsukuba.ac.jp/~daisuke/">Daisuke Takahashi</a> at <a href="https://www.hpcs.cs.tsukuba.ac.jp/">High Performance Computing System (HPCS) laboratory</a>, University of Tsukuba, Japan
-        </li>
-        <li>
-          <strong>2016.4 &ndash; 2020.3</strong>: Bachelor student at College of Information Science (COINS), University of Tsukuba, Japan
-        </li>
-        <li>
-          <strong>2016.3 &ndash; 2022.3</strong>: Part-time software engineer at <a href="https://idein.jp/">Idein Inc.</a>, Japan
+          <strong>2016-04 &ndash; 2020-03</strong>: Bachelor of Information Engineering, College of Information Science, University of Tsukuba
         </li>
       </ul>
 
-      <h2>Social networking accounts</h2>
+      <h2>Links</h2>
 
       <ul>
         <li>
@@ -100,48 +95,23 @@
 
       <h2>Publications</h2>
 
-      <input type="checkbox" id="check-show-abstract" class="show-abstract">
-      <label for="check-show-abstract">Show abstract</label>
-
-      <h3>Journal paper</h3>
+      <h3>Journal articles</h3>
 
       <ol reversed>
         <li>
           Akira Nakashima, <em>Yukimasa Sugizaki</em>, Hikaru Tsuchida, Takuya Hayashi, Koji Nuida, Kengo Mori, Toshiyuki Isshiki,
           <strong>Multi-Key Homomorphic Encryption with Threshold Re-Encryption via (Replicated) Additive Secret Sharing</strong>,
           IEICE Transactions on Fundamentals of Electronics, Communications and Computer Sciences (TRANSFUN),
-          2025,
+          2026,
           doi:<a href="https://doi.org/10.1587/transfun.2025CIP0021">10.1587/transfun.2025CIP0021</a>
-          <div class="abstract">
-            Fully homomorphic encryption (FHE) is a cryptographic scheme that allows users to perform arbitrary arithmetic operations over plaintexts by operations (called homomorphic operations) on ciphertexts without decryption.
-            A multi-key FHE (MK-FHE) can perform homomorphic operations on ciphertexts encrypted with different encryption keys.
-            In MK-FHE schemes, to decrypt a ciphertext encrypted with different users' keys, users having the corresponding decryption keys run a threshold decryption, which is a combination of each user's partial decryption and merging of their results.
-            However, it has a drawback that the merging process requires communication and hence these users must be online during the process. Moreover, the computation and communication costs grow when the number of involved users increases.
-            There is a previous work to overcome this issue by applying the idea of proxy re-encryption (PRE), where a proxy can convert a multi-key ciphertext, using re-encryption keys given by the key holders, into a ciphertext decryptable by a single receiver's decryption key.
-            However, a collusion of only an adversarial receiver and the single proxy can reveal the original user's decryption key.
-            To resolve the issue, we propose a new framework of MK-FHE with threshold PRE.
-            Here we introduce <var>N</var> proxies performing re-encryption in threshold manner; now the adversarial receiver needs to collude with all of the <var>N</var> proxies, which becomes more difficult than the previous single-proxy case.
-            We also propose an instantiation based on the BFV scheme and prove its security.
-            In addition, we implement our scheme and measure the running time of its algorithms.
-          </div>
         </li>
         <li>
           <em>Yukimasa Sugizaki</em>, Daisuke Takahashi,
           <strong>Improved Modular Multiplication Algorithms Using Solely IEEE 754 Binary Floating-Point Operations</strong>,
           IEEE Transactions on Emerging Topics in Computing (TETC),
           2025,
-          doi:<a href="https://doi.org/10.1109/TETC.2025.3582551">10.1109/TETC.2025.3582551</a>
-          <div class="abstract">
-            In this paper, we propose three modular multiplication algorithms that use only the IEEE 754 binary floating-point operations.
-            Several previous studies have used floating-point operations to perform modular multiplication.
-            However, they considered only positive integers and did not utilize the dedicated sign bit in the floating-point representation.
-            Our first algorithm is an extension of these studies, which are based on Shoup multiplication.
-            By allowing operands to be negative, we increased the maximum supported modulus size by approximately 1.21 times.
-            Our remaining two algorithms are based on Montgomery multiplication for positive and signed integers, respectively.
-            Although these algorithms require more round-to-integral operations, they support a modulus size of up to twice as large as that for Shoup multiplication for positive integers.
-            For processors with relatively low round-to-integral performance, we propose versions of the three algorithms without the round-to-integral operation.
-            Evaluations on four CPUs with different levels of instruction performance show that floating-point-based algorithms, including the proposed algorithms, can be regarded as alternatives to integer-based algorithms for mid-sized moduli, especially when floating-point operations are faster on the processors.
-          </div>
+          doi:<a href="https://doi.org/10.1109/TETC.2025.3582551">10.1109/TETC.2025.3582551</a>,
+          <a href="https://github.com/Terminus-IMRC/floating-point-modular-multiplication">code</a>
         </li>
         <li>
           <em>Yukimasa Sugizaki</em>, Daisuke Takahashi,
@@ -149,18 +119,10 @@
           Annals of Combinatorics,
           2022,
           doi:<a href="https://doi.org/10.1007/s00026-022-00584-5">10.1007/s00026-022-00584-5</a>
-          <div class="abstract">
-            We present a fast algorithm for computing the number of magic series, an enumeration problem of a certain integer partition.
-            Kinnaes showed that the number appears as a coefficient in a Gaussian polynomial and that the exact value can be efficiently extracted with a finite variant of Cauchy's integral formula.
-            The algorithm requires a bit time complexity of <var>O</var>(<var>m</var><sup>4</sup> <var>M</var>(<var>m</var> log <var>m</var>)) and <var>O</var>(<var>m</var> log <var>m</var>)-bit space, where <var>m</var> is the order of the magic series and <var>M</var>(<var>n</var>) is the time complexity of multiplying two <var>n</var>-bit numbers.
-            Through our analysis, we confirm that this is the most efficient among previously reported algorithms.
-            In addition, we show that the number can be computed with a bit time complexity of <var>O</var>(<var>m</var><sup>3</sup> log <var>m</var> <var>M</var>(<var>m</var> log <var>m</var>)) by directly carrying out polynomial multiplication and division on the Gaussian polynomial.
-            Though the space consumption increases to <var>O</var>(<var>m</var><sup>3</sup> log <var>m</var>) bits, we demonstrate that our method actually computes the number faster for large orders.
-          </div>
         </li>
       </ol>
 
-      <h3>Conference proceedings with review</h3>
+      <h3>Peer-reviewed conference proceedings</h3>
 
       <ol reversed>
         <li>
@@ -168,34 +130,16 @@
           <strong>Improved Implementation of Number Theoretic Transform on NVIDIA GPU with Tensor Cores</strong>,
           SupercomputingAsia 2026 / International Conference on High Performance Computing in Asia-Pacific Region 2026 (SCA/HPCAsia 2026),
           2026,
-          doi:<a href="https://doi.org/10.1145/3773656.3773673">10.1145/3773656.3773673</a>
-          <div class="abstract">
-            In this paper, we propose an improved implementation of the number theoretic transform (NTT) using Tensor Cores, which are dedicated matrix arithmetic units on NVIDIA GPUs.
-            The NTT is a generalization of the discrete Fourier transform over modular integers, enabling error-free computation of convolution and polynomial multiplication.
-            To accelerate cryptographic schemes, one of the chief applications of the NTT, previous studies also employed Tensor Cores for NTT computation.
-            However, there is still room for optimizations with regard to the instruction and shared memory usage.
-            Through a careful analysis, we found that the matrix transposition required for in-register NTT computation can be performed at no cost (i.e., without using memory) by only swapping the order of the input operands to Tensor Cores.
-            Because Tensor Cores support only up to eight-bit integers as inputs, we first compute and accumulate the products of decomposed eight-bit digits and then reduce the result modulo an appropriate modulus, as done in previous studies.
-            For this task, we propose an efficient modular reduction algorithm that utilizes the properties of moduli used for the NTT.
-            We compare the performance of our implementation with that of existing methods.
-            The results show that our implementation outperforms existing methods for a certain set of parameter values.
-          </div>
+          doi:<a href="https://doi.org/10.1145/3773656.3773673">10.1145/3773656.3773673</a>,
+          <a href="https://github.com/Terminus-IMRC/tensor-core-ntt">code</a>
         </li>
         <li>
           <em>Yukimasa Sugizaki</em>, Daisuke Takahashi,
           <strong>An Improved Implementation of Multi-Threaded Number Theoretic Transform Using Arm Scalable Vector Extension Instruction Set</strong>,
           24th International Symposium on Parallel and Distributed Computing (ISPDC 2025),
           2025,
-          doi:<a href="https://doi.org/10.1109/ISPDC67428.2025.00020">10.1109/ISPDC67428.2025.00020</a>
-          <div class="abstract">
-            In this paper, we propose a multi-threaded number theoretic transform (NTT) implementation using Arm Scalable Vector Extension (SVE) instructions.
-            The NTT, a generalization of the fast Fourier transform over modular integers, is used for the multiplication of polynomials and multiple-precision numbers.
-            We adopt the blocked six-step NTT algorithm, which decomposes the transform into smaller independent transforms, to achieve high cache utilization and parallelism.
-            Under the typical assumption that the inner transform length is a power of two and is performed in bit-reversed order, we reduce the number of matrix transpositions in the algorithm from three to two.
-            We also make use of the shuffle instructions of SVE to efficiently perform submatrix transposition within the vector registers, which is used in both the inner NTT computation and transposition in the six-step algorithm.
-            We evaluate our multi-threaded NTT implementation on the Fujitsu A64FX processor, which is equipped with 48 cores, each with two 512-bit SVE units.
-            The results show that the proposed optimizations accelerate a 2<sup>31</sup>-point NTT by 1.81 times compared to previous work that used the same processor.
-          </div>
+          doi:<a href="https://doi.org/10.1109/ISPDC67428.2025.00020">10.1109/ISPDC67428.2025.00020</a>,
+          <a href="https://github.com/Terminus-IMRC/sve-ntt">code</a>
         </li>
         <li>
           Akira Nakashima, Takuya Hayashi, Hikaru Tsuchida, <em>Yukimasa Sugizaki</em>, Kengo Mori, Takashi Nishide,
@@ -203,17 +147,6 @@
           12th Workshop on Encrypted Computing &amp; Applied Homomorphic Cryptography (WAHC 2024),
           2024,
           doi:<a href="https://doi.org/10.1145/3689945.3694804">10.1145/3689945.3694804</a>
-          <div class="abstract">
-            Fully homomorphic encryption (FHE) can perform computations on encrypted data, allowing us to analyze sensitive data while maintaining security.
-            Several popular FHE schemes, such as BGV and BFV, are suitable for arithmetic circuits.
-            However, there is still much room for improving the efficiency of the evaluation of non-linear functions in those schemes.
-            We propose an efficient method for the evaluation of arbitrary bivariate functions in homomorphic encryption with integers as plaintext.
-            Prior work on arbitrary bivariate function evaluation for relatively large plaintext integers has been proposed by Maeda et al. (WAHC'22).
-            In the method of Maeda et al., the polynomial evaluation is the most time-consuming part in terms of the execution time.
-            In this work, we construct a method for arbitrary bivariate functions based on homomorphic linear transformations, eliminating the need for polynomial evaluation to enhance efficiency.
-            We also provide a time complexity analysis showing that our method achieves lower time computational complexity.
-            In addition, we implement the previous method of Maeda et al. and our proposed method using OpenFHE with the input domain {0, 1, ..., 2<sup>15</sup> - 1} and demonstrate that our method achieves a 1.38 times speed up for the division function compared to the previous method.
-          </div>
         </li>
         <li>
           Akira Nakashima, <em>Yukimasa Sugizaki</em>, Hikaru Tsuchida, Takuya Hayashi, Koji Nuida, Kengo Mori, Toshiyuki Isshiki,
@@ -221,18 +154,6 @@
           Selected Areas in Cryptography 2024 (SAC 2024),
           2024,
           doi:<a href="https://doi.org/10.1007/978-3-031-82852-2_4">10.1007/978-3-031-82852-2_4</a>
-          <div class="abstract">
-            Fully homomorphic encryption (FHE) is a cryptographic scheme that allows users to perform arbitrary arithmetic operations over plaintexts by operations (called homomorphic operations) on ciphertexts without decryption.
-            A multi-key FHE (MK-FHE) can perform homomorphic operations on ciphertexts encrypted with different encryption keys.
-            In MK-FHE schemes, to decrypt a ciphertext encrypted with different users' keys, users having the corresponding decryption keys run a threshold decryption, which is a combination of each user's partial decryption and merging of their results.
-            However, it has a drawback that the merging process requires communication and hence these users must be online during the process. Moreover, the computation and communication costs grow when the number of involved users increases.
-            There is a previous work to overcome this issue by applying the idea of proxy re-encryption (PRE), where a proxy can convert a multi-key ciphertext, using re-encryption keys given by the key holders, into a ciphertext decryptable by a single receiver's decryption key.
-            However, a collusion of only an adversarial receiver and the single proxy can reveal the original user's decryption key.
-            To resolve the issue, we propose a new framework of MK-FHE with threshold PRE.
-            Here we introduce <var>N</var> proxies performing re-encryption in threshold manner; now the adversarial receiver needs to collude with all of the <var>N</var> proxies, which becomes more difficult than the previous single-proxy case.
-            We also propose an instantiation based on the BFV scheme and prove its security.
-            In addition, we implement our scheme and measure the running time of its algorithms.
-          </div>
         </li>
         <li>
           <em>Yukimasa Sugizaki</em>, Hikaru Tsuchida, Takuya Hayashi, Koji Nuida, Akira Nakashima, Toshiyuki Isshiki, Kengo Mori,
@@ -240,16 +161,6 @@
           European Symposium on Research in Computer Security (ESORICS 2023),
           2023,
           doi:<a href="https://doi.org/10.1007/978-3-031-50594-2_3">10.1007/978-3-031-50594-2_3</a>
-          <div class="abstract">
-            Fully homomorphic encryption (FHE) enables arithmetic operations to be performed over plaintext by operations on undecrypted ciphertext.
-            The Chillotti-Gama-Georgieva-Izabachene (CGGI) scheme is a typical FHE scheme, has attracted attention because of its fast bootstrapping and the availability of open-source implementation software.
-            A threshold FHE (ThFHE) scheme has protocols for distributed key generation and distributed decryption that are executed cooperatively among the parties while keeping the decryption key distributed among them.
-            It is useful for secure computations with inputs from multiple parties.
-            However, a ThFHE scheme based on CGGI has yet to be proposed.
-            In this paper, we propose a client-aided ThFHE scheme based on CGGI.
-            Our scheme achieves the same bootstrapping as CGGI without affecting the noise analysis or any CGGI parameter.
-            Therefore, existing open-source software implementing CGGI can easily be extended to our scheme, a ThFHE variant of the CGGI scheme, without changing the implementation part regarding homomorphic operations.
-          </div>
         </li>
         <li>
           <em>Yukimasa Sugizaki</em>, Daisuke Takahashi,
@@ -257,18 +168,10 @@
           International Conference on Algorithms and Architectures for Parallel Processing (ICA3PP 2020),
           2020,
           doi:<a href="https://doi.org/10.1007/978-3-030-60239-0_25">10.1007/978-3-030-60239-0_25</a>
-          <div class="abstract">
-            The numbers of magic series of large orders are computed on Intel Xeon Phi processors with an improved and optimized Montgomery multiplication algorithm.
-            The number of magic series can be efficiently computed by Kinnaes' formula, of which the most time-consuming element is modular multiplication.
-            We use Montgomery multiplication for faster modular multiplication, and the number of operations is reduced through procedural simplifications.
-            Modular addition, subtraction, and multiplication operations are vectorized by using the following instructions: Intel Advanced Vector Extensions (AVX), Intel Advanced Vector Extensions 2 (AVX2), and Intel Advanced Vector Extensions 512 (AVX-512).
-            The number of magic series of order 8000 is computed on multiple nodes of an Intel Xeon Phi processor with a total execution time of 1806 days.
-            Results are compared with salient studies in the literature to confirm the efficacy of the approach.
-          </div>
         </li>
       </ol>
 
-      <h3>Oral presentation without review</h3>
+      <h3>Conference and workshop presentations (non-refereed)</h3>
 
       <ol reversed>
         <li>
@@ -278,54 +181,36 @@
           2026,
           <a href="https://ipsj.ixsq.nii.ac.jp/records/2009152">oai:ipsj.ixsq.nii.ac.jp:02009152</a>,
           <a href="https://ipsj.ixsq.nii.ac.jp/record/2009152/files/IPSJ-HPC26204005.pdf">IPSJ-HPC26204005.pdf</a>
-          <div class="abstract">
-            近年の演算加速器には，低精度に特化した行列乗算ユニットが搭載されることが多い．この高い低精度行列演算性能を活かし，より高い精度での浮動小数点行列の乗算を高速に行う方式として，尾崎スキームIおよびIIが知られている．Fanら（2022）をはじめとする先行研究において，暗号などでの利用を想定し，尾崎スキームIに類似した方式による，剰余整数行列乗算の高速化が提案されている．一方で，尾崎スキームIIを基とした剰余整数行列乗算の高速化は提案されていない．本稿では，尾崎スキームIIを基とした剰余整数行列乗算をNVIDIA GPUのTensor Coreに向けて実装し，その性能を報告する．
-          </div>
         </li>
         <li>
           <em>杉崎 行優</em>, 大槻 紗季, 田宮 寛人, 中島 明, 一色 寿幸,
           <strong>三角格子における最近傍ベクトル探索の高速化とその実装</strong>,
           <a href="https://www.iwsec.org/scis/2025/index.html">2025年 暗号と情報セキュリティシンポジウム（SCIS 2025）</a>,
           2025
-          <div class="abstract">
-            生体特徴量などのサンプリングのたびに誤差を含む情報から一意の乱数を抽出する手法としてfuzzy extractorが知られている．精度の観点から，ユークリッド距離に基づくfuzzy extractorの構成が望まれるが，効率的な構成方法が知られていない．そこで，三角格子における特徴量の最近傍ベクトルを利用することで，ユークリッド距離に基づく本人性の確認を高精度に近似可能なfuzzy extractorを構成できることが示された．本稿では，高橋らの方式で用いられる格子上の最近傍ベクトル探索処理を効率化する方法を提案する．特徴量の次元数を <var>n</var> としたとき，高橋らの方式の最近傍ベクトル探索処理は計算量が <var>O</var> (<var>n</var> log <var>n</var>) であったのに対し，提案方式は <var>O</var> (<var>n</var>) となる．さらに提案方式を実装評価し，顔認証等で用いられる次元数において提案方式の有効性を示す．
-          </div>
         </li>
         <li>
           <em>Yukimasa Sugizaki</em>, Saki Otsuki, Hiroto Tamiya, Akira Nakashima, Toshiyuki Isshiki,
           <strong>三角格子における最近傍ベクトル探索の高速化</strong>,
           <a href="https://www.ieice.org/~biox/sbra2024/">第14回 バイオメトリクスと認識・認証シンポジウム（SBRA 2024）</a>,
           2024
-          <div class="abstract">
-            生体特徴量などのサンプリングのたびに誤差を含む情報から一意の乱数を抽出する手法としてfuzzy extractorが知られている．ユークリッド距離に基づくfuzzy extractorの構成が望まれるが，効率的な構成方法が知られていない．そこで，三角格子における特徴量の最近傍ベクトルを利用することで，ユークリッド距離に基づく本人性の確認を高精度に近似可能なfuzzy extractorを構成できることが示された．本稿では，高橋らの方式で用いられる格子上の最近傍ベクトル探索処理を効率化する方法を提案する．特徴量の次元数を <var>n</var> としたとき，高橋らの方式の最近傍ベクトル探索処理は <var>O</var>(<var>n</var> log <var>n</var>) であったのに対し，提案方式は <var>O</var>(<var>n</var>) で実行できる．
-          </div>
         </li>
         <li>
           中島 明, 林 卓也, 土田 光, <em>杉崎 行優</em>, 森 健吾, 西出 隆志,
           <strong>整数型準同型暗号におけるHomomorphic Linear Transformationを用いた任意二変数関数計算</strong>,
           <a href="https://www.iwsec.org/scis/2024/index.html">2024年 暗号と情報セキュリティシンポジウム（SCIS 2024）</a>,
           2024
-          <div class="abstract">
-            本稿では，整数を平文とする準同型暗号方式における任意二変数関数計算の効率化を提案する．比較的大きな平文整数に対して任意二変数関数計算を行う先行研究として，前田らの方式 (WAHC'22) がある．本研究では，前田らの方式において支配的な処理である多項式評価計算を回避し，より高速なHomomorphic Linear Transformation処理に基づくテーブルルックアップを行うことで効率化を実現する．提案方式についてPALISADEを用いたC++による実装を行い，その結果を報告する．
-          </div>
         </li>
         <li>
           伊藤 直也, <em>杉崎 行優</em>, 土田 光, 高木 剛,
           <strong>ゲート数が少ないbinary adder treeとmulti-key TFHEを用いた性能評価</strong>,
           <a href="https://www.iwsec.org/scis/2023/index.html">2023年 暗号と情報セキュリティシンポジウム（SCIS 2023）</a>,
           2023
-          <div class="abstract">
-            準同型暗号とは，暗号文を復号せずに，平文に対する演算が可能な暗号方式である．平文に対する加算と乗算を任意の回数だけ計算可能な準同型暗号を，完全準同型暗号という．代表的な完全準同型暗号として，TFHEが挙げられる．さらに，複数の暗号化鍵が存在可能な一般化されたTFHEとして，multi-key TFHE (MK-TFHE) が提案されている．TFHEは関数を論理回路で表現し，論理ゲートごとに準同型演算を行うことで，入力を明かさずに任意の関数を計算できる．代表的な関数として，総和計算が挙げられる．特に各入力が1ビットの総和計算は，ハミング距離計算や二値化ニューラルネットワークの推論で用いられる．総和計算の回路表現として，binary adder tree (BAT) が挙げられる．TFHEにより総和計算を含む関数を計算する場合，BATの計算時間を削減すること，関数全体の計算時間も削減できる．よって，BATを少ないゲート数で構成することが望まれる．本稿では既存のBATよりもゲート数が少ないBATを提案する．また，MK-TFHEにより提案方式を用いたハミング距離計算を実装し，実行時間を評価する．
-          </div>
         </li>
         <li>
           林 卓也, 一色 寿幸, 森 健吾, 縫田 光司, <em>杉崎 行優</em>, 土田 光,
           <strong>TFHEに基づくクライアント補助型閾値完全準同型暗号</strong>,
           <a href="https://www.iwsec.org/scis/2023/index.html">2023年 暗号と情報セキュリティシンポジウム（SCIS 2023）</a>,
           2023
-          <div class="abstract">
-            Fully homomorphic encryption (FHE) とは，暗号文を復号せずに，暗号文上の計算により平文に対する加算や乗算を任意の回数だけ計算可能な暗号方式である．特に復号鍵を複数の参加者にシェアとして分散したまま復元せずに，復号鍵に対応する暗号化鍵の生成や暗号文の復号が可能なFHEをthreshold FHE (ThFHE) という．ThFHEでは，復号鍵のシェアが一定数集まらない限り復号鍵を復元できないため，複数の参加者からの入力を用いた秘密計算に有用である．代表的なFHEとして，TFHEが挙げられる．TFHEは，暗号文に蓄積されたノイズを低減するbootstrappingが高速であることや，TFHEを実装したオープンソースソフトウェアが充実していることから，注目を集めている．しかし，TFHEに基づくThFHEは，我々が知る限り提案されていない．本稿では，TFHEに基づくクライアント補型のThFHEを提案する．提案方式は，TFHEと同じbootstrappingを実現しつつ，分散暗号化や分散復号が可能なため，複数の参加者からの入力を用いた秘密計算を実現できる．
-          </div>
         </li>
         <li>
           <em>杉﨑 行優</em>, 高橋 大介,
@@ -334,9 +219,14 @@
           2020,
           <a href="https://drive.google.com/uc?id=1FyiyqreWBllfUVIsG8ynDXvaWzY3SjyK">annual2020_proceedings.pdf</a>,
           pp.419&ndash;420
-          <div class="abstract">
-            本研究では剰余乗算を効率的に計算するモンゴメリ乗算アルゴリズムをNVIDIA Volta GPU向けに実装し性能を評価した．本講演では，整数と浮動小数点の演算器が独立に存在し動作するというNVIDIA Volta GPUの特性を活かし，整数演算と浮動小数点演算の両方を用いてモンゴメリ乗算を計算した場合の性能の向上について報告する．
-          </div>
+        </li>
+      </ol>
+
+      <h3>Media</h3>
+
+      <ol reversed>
+        <li>
+          NEC Corporation, <strong>Biometric Based Digital Signature Fundamentally Solves the Risks of Managing Face Information and Private Keys</strong> (<strong>顔情報・秘密鍵の管理リスクを根本から解決: 生体情報利用デジタル署名</strong>), 2025, <a href="https://www.nec.com/en/global/rd/technologies/202408/index.html">English</a>, <a href="https://jpn.nec.com/rd/technologies/202408/index.html">Japanese</a>
         </li>
       </ol>
 
